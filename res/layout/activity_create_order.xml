@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        tools:context=".activities.CreateOrderActivity">
+
+        <TextView
+            android:id="@+id/textViewCreateOrderTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create New Order"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/editTextProductName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:hint="Product Name(s)"
+            android:inputType="textCapSentences|textMultiLine"
+            android:minHeight="48dp"
+            android:padding="12dp"
+            android:background="@drawable/edit_text_background" app:layout_constraintTop_toBottomOf="@id/textViewCreateOrderTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <EditText
+            android:id="@+id/editTextPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Total Price (e.g., 150.00)"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:padding="12dp"
+            android:background="@drawable/edit_text_background"
+            app:layout_constraintTop_toBottomOf="@id/editTextProductName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <EditText
+            android:id="@+id/editTextPickupDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Pickup Date (e.g., YYYY-MM-DD)"
+            android:inputType="date"
+            android:minHeight="48dp"
+            android:padding="12dp"
+            android:focusable="false" android:clickable="true" android:background="@drawable/edit_text_background"
+            app:layout_constraintTop_toBottomOf="@id/editTextPrice"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <EditText
+            android:id="@+id/editTextPickupTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Pickup Time (e.g., HH:MM)"
+            android:inputType="time"
+            android:minHeight="48dp"
+            android:padding="12dp"
+            android:focusable="false" android:clickable="true" android:background="@drawable/edit_text_background"
+            app:layout_constraintTop_toBottomOf="@id/editTextPickupDate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <EditText
+            android:id="@+id/editTextPickupLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Pickup Location Address"
+            android:inputType="textPostalAddress|textMultiLine"
+            android:minHeight="48dp"
+            android:padding="12dp"
+            android:background="@drawable/edit_text_background"
+            app:layout_constraintTop_toBottomOf="@id/editTextPickupTime"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <EditText
+            android:id="@+id/editTextBuyerId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Buyer's User ID"
+            android:inputType="textNoSuggestions"
+            android:minHeight="48dp"
+            android:padding="12dp"
+            android:background="@drawable/edit_text_background"
+            app:layout_constraintTop_toBottomOf="@id/editTextPickupLocation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Button
+            android:id="@+id/buttonCreateOrder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Create Order"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:backgroundTint="?attr/colorPrimary" android:textColor="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@id/editTextBuyerId"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="16dp"/>
+
+        <ProgressBar
+            android:id="@+id/progressBarCreateOrder"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_buyer_shop"
+        android:icon="@drawable/ic_add" <!-- PROVIDE THIS ICON -->
+    android:title="Shop" />
+
+    <item
+        android:id="@+id/nav_buyer_orders"
+        android:icon="@drawable/ic_add" <!-- PROVIDE THIS ICON -->
+    android:title="My Orders" />
+</menu>
