@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Legacy-Order</string>
+    <string-array name="user_roles">
+        <item>Buyer</item>
+        <item>Seller</item>
+    </string-array>
+</resources>
